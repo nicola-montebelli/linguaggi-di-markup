@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- creare un layout completo con:
+     -nav con menu di 3 elementi a scelta(con anchor a notizie, contatti, storia)
+     -header, main, sezione ultime notizie con 4 articoli
+     -sezione emoji con una tabella di 4 righe e 5 colonne con ogni td una emoji
+     -sezione contatti con la presenza di input per nominativo, email,tel,messaggio(textarea)
+     il form deve inviare i contatti a a contatti.php
+     -sezione storia con un ul con almeno 6 li
+     -footer con img logo, link a sitemap.php, privacy-policy.php, cookie-policy.html
+     -socket con credits-->
+     
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#notizie">Notizie</a></li>
+            <li><a href="#contatti">Contatti</a></li>   <!-- non funzionanti da controllare-->
+            <li><a href="#storia">Storia</a></li>
+        </ul>
+    </nav><br>
+    <header>
+        <h1>Esercizio elementi HTML5</h1>
+    </header><br>
+    <main>
+        <section id="notizie"></section>
+        <article>
+            <h2>Articolo 1: Cronaca nera</h2>
+            <summary>Un articolo sulla cronaca nera</summary>
+        </article><br>
+        <article>
+            <h2>Articolo 2: Politica Nazionale</h2>
+            <summary>Un articolo sulla politica nazionale</summary>
+        </article><br>
+        <article>
+            <h3>Articolo 3: Cultura Sportiva</h3>
+            <summary>Un articolo sulla cultura sportiva</summary>
+        </article><br>
+        <article>
+            <h4>Articolo 4: Ricette</h4>
+            <summary>Un articolo sulle ricette</summary>
+        </article><br><hr>
+
+        <section id="emojitab">
+            <table border="1">
+                <tr>
+                    <td>&#128507</td>
+                    <td>&#128510</td>
+                    <td>&#128511</td>
+                    <td>&#128508</td>
+                    <td>&#128509</td>
+                </tr>
+                <tr>
+                    <td>&#128512</td>
+                    <td>&#128513</td>
+                    <td>&#128514</td>
+                    <td>&#128515</td>
+                    <td>&#128516</td>
+                </tr>
+                <tr>
+                    <td>&#128186</td>
+                    <td>&#128188</td>
+                    <td>&#128190</td>
+                    <td>&#128193</td>
+                    <td>&#128200</td>
+                </tr>
+                <tr>
+                    <td>&#128202</td>
+                    <td>&#128203</td>
+                    <td>&#128204</td>
+                    <td>&#128205</td>
+                    <td>&#128206</td>
+                </tr>
+            </table>
+        </section><hr>
+        <section id="contatti">
+            <form action="http://localhost/linguaggi-di-markup-25-26/contatti.php" method="post">
+                
+                <label for="name"></label>
+                <input type="text" id="name" name="nome" placeholder="Inserisci Nome">
+
+                <label for="surname"></label>
+                <input type="text" id="surname" name="cognome" placeholder="Inserisci Cognome"><br>
+
+                <label for="email"></label>
+                <input type="email" id="email" name="mail" placeholder="Inserisci Mail">
+
+                <label for="telef"></label>
+                <input type="tel" id="telef" name="telefono" placeholder="0123456789" maxlength="10"><br><br>
+
+                <label for="area-testo"></label>
+                <textarea name="messaggio" id="area-testo" cols="30" rows="5" maxlength="50" minlength="10" placeholder="Mandaci un'opinione"></textarea>
+                <button type="submit">Invia</button>
+            </form>
+        </section>
+        <section id="storia">
+                <h2>La nostra storia</h2>
+                <ul>
+                    <li>La nostra storia inizia nel 1990</li>
+                    <li>La nostra storia continua nel 2000</li>
+                    <li>La nostra storia si sviluppa nel 2010</li>
+                    <li>La nostra storia si espande nel 2020</li>
+                    <li>La nostra storia si evolve nel 2030</li>
+                    <li>La nostra storia continua nel 2040</li>
+                </ul>
+        </section>
+
+        <footer>
+            <section id="fondo-pagina">
+                <img src="../lezione3/immagini prodotti/peperoncini.jpg" alt="logoAziendale" style="max-width: 80px;">
+                <small> PeperonciniNews s.r.l</small>
+                <address>Via Dei Baluardi Cacofonici 44, 47924 Rimini(RN), Italia</address>
+            </section>
+        </footer>
+    </main>
+    
+</body>
+</html>

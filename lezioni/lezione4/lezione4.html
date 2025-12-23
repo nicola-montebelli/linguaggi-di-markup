@@ -3,9 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Lezione 4</title>
+    <link rel="stylesheet" href="style.css"> <!-- carica un foglio di stile-->
+    <!-- va messo nell'head così che lo carichi prima del caricamento del sito-->
+
 </head>
 <body>
-    
+    <h1>I Form parte 2</h1>
+    <form action="http://localhost/linguaggi-di-markup-25-26/submit-form.php" method="post" enctype="multipart/form-data"><!-- enctype serve per caricare file-->
+        <label for="nome">Nome</label>
+        <input type="text" id="nome" name="nome" tabindex="2" placeholder="Inserisci il nome"><!-- placeholder è un testo di esempio che scompare quando si scrive nel campo-->
+        <label for="cognome">Cognome</label>
+        <input type="text" id="cognome" name="cognome" tabindex="3" placeholder="Inserisci il cognome">
+        <label for="codicefiscale">Codice Fiscale:</label>
+        <input type="text" id="codicefiscale" name="codice-fiscale" maxlength="16" minlength="16" pattern="[A-Z]{6}[0-9]{2}[ABCDEHLMPRST][0-9]{2}[A-Z0-9]{4}[A-Z]{1}" required tabindex="1" autofocus> <!-- formato richiesto da questo campo--><!-- regular expression-->
+        <!-- autofocus pone l'attenzione sull'elemento scelto che solitamente è quello più importante-->
+        <!-- regex tester è un sito che controlla le regular expression-->
+        <br>
+        <label for="regionepreferita">Regione Preferita:</label>
+        <select name="regione-preferita" id="regionepreferita">
+            <option value="piemonte">Piemonte</option>
+            <option value="lombardia">Lombardia</option> <!-- con l'attributo selected il valore è selezionato di default-->
+            <option value="veneto">Veneto</option>
+            <option value="toscana">Toscana</option>
+            <option value="sicilia">Sicilia</option>
+        </select>
+        <br>
+        <label for="cibopreferito">Cibo preferito:</label>
+        <select name="cibo-preferito" id="cibopreferito">
+            <optgroup label="frutta">
+                <option value="mela">Mela</option>
+                <option value="banana">Banana</option>
+                <option value="arancia">Arancia</option>
+            </optgroup>
+            <optgroup label="verdura">
+                <option value="carota">Carota</option>
+                <option value="broccoli">Broccoli</option>
+                <option value="spinaci">Spinaci</option>
+            </optgroup>
+            <optgroup label="Pizza">
+                <option value="margherita">Margherita</option>
+                <option value="diavola">Diavola</option>
+                <option value="quattro-stagioni">Quattro Stagioni</option>
+            </optgroup>
+            <optgroup label="dolci">
+                <option value="tiramisu">Tiramisù</option>
+                <option value="cannolo">Cannolo</option>
+                <option value="panna-cotta">Panna Cotta</option>
+            </optgroup>     
+        </select>
+        <br>
+            <label for="filecv">Carica il tuo CV:</label>
+            <input type="file" name="file-cv" id="filecv" accept=".pdf,.doc,.docx,image/*" required> <!-- accetta solo file pdf, doc, docx e immagini-->
+            <br><br>
+            <label for="recensione">Scrivi la tua recensione:</label>
+            <input type="number" name="recensione" id="recensione" min="1" max="10" value="8">
+            <br>
+            <label for="volume">Volume</label>
+            <input type="range" name="sldvolume" id="volume" min="0" max="10" value="5" step="5"> <!-- step indica di quanto deve aumentare o diminuire il valore-->
+            <br>
+            <input list="genere-film-pref">
+            <datalist id="genere-film-pref">    <!-- datalist è un menù a tendina e textbox con incluso il suggerimento-->
+                <option value="Azione">
+                <option value="Commedia">
+                <option value="Drammatico">
+                <option value="Horror">
+                <option value="Fantascienza">
+                <option value="Romantico">
+            </datalist>
+            <br>
+            <label for="messaggio" hidden>Scrivi:</label>
+            <textarea name="mess" id="messaggio" cols="40" rows="10" maxlength="100" minlength="10">
+            </textarea>
+            <button type="submit">Registrati</button>
+            <br><br><hr>
+            
+    </form>
+    <!--tabindex indicizza gli elementi della pagina renendoli ordinati quando si naviga col tab-->
+    <!-- solitamente è di default senza che venga specificato e gli indici vanno da 0-X-->
+
+    <script src="filejs.js"></script> <!-- sarebbe bene metterlo in fondo-->
 </body>
 </html>

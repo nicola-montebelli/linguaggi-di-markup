@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 4a - Tag Semantici</title>
+</head>
+<body>
+    <header>
+        <h1>Lezione 4a - Tag semantici in HTML5</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+            <li><a href="le-sedi.html">Le Sedi</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="articoli-evidenza">
+            <article>
+                <h2>Articolo 1</h2>
+                <p>Contenuto dell'articolo 1.</p>
+                <details>
+                    <summary>Riassunto 1</summary>
+                    <p>Contenuto del riassunto dell'articolo 1.</p>
+                </details>
+            </article>
+            <article>
+                <h2>Articolo 2</h2>
+                <p>Contenuto dell'articolo 2.</p>
+                <details>
+                    <summary>Riassunto 2</summary>
+                    <p>Contenuto del riassunto dell'articolo 2.</p>
+                </details>
+            </article>
+            <article>
+                <h2>Articolo 3</h2>
+                <p>Contenuto dell'articolo 3.</p>
+                <details>
+                    <summary>Riassunto 3</summary>
+                    <p>Contenuto del riassunto dell'articolo 3.</p>
+                </details>
+            </article>
+        </section>
+        <section id="clieni">
+            <label for="reviews">Recensioni Clienti</label>
+            <meter value="8" min="2" max="12"></meter>
+            <p>valutazione media: 8/12</p>
+        </section>
+        <section id="meteo">
+            <!-- Inizio codice ilMeteo.it -->
+            <iframe width="400" height="252" scrolling="no" frameborder="no" noresize="noresize" src="https://www.ilmeteo.it/box/previsioni.php?citta=5740&type=day1&width=400&ico=1&lang=ita&days=6&font=Arial&fontsize=12&bg=FFFFFF&fg=000000&bgtitle=0099FF&fgtitle=FFFFFF&bgtab=F0F0F0&fglink=1773C2"></iframe>
+            <!-- Fine codice ilMeteo.it -->
+             <!-- il iframe consente di inserire un documento esterno nella propria pagina-->
+        </section>
+    </main>
+    <footer>
+        <section id="footer-info">
+            <img src="../lezione3/assets/azienda.jpg" alt="Azienda" style="max-width: 500px;">
+            <p>Infotech s.r.l.</p>
+            <address>Via Dalle Balle 77, 47924 Rimini, Italia</address>
+        </section>
+        <section id="socket">
+            <small>2025 Infotech s.r.l. Copyright Reserved</small>
+            <small>P.Iva: 12345678910</small>   <!-- è obbligatorio inserire almeno un valore univoco per l'identificazione dell'azienda o persona-->
+            <small>Rea: RN-123456</small>
+            <a href="https://webagency.it"> developed by WA</a>
+        </section>
+    </footer> 
+</body>
+</html>
