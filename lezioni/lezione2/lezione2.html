@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="La descrizione 'forse' suggerita da mdr">
+    <title>Lezione 2</title>
+</head>
+
+<body>
+    <h1 title="Sono il titolo dell'h1" contenteditable="true" id="top">Lezione2</h1><!-- id="top" è la parola chiave per tornare su quando clicco in un link anchor(sotto è href="#top")-->
+    <p lang="it" style="color:blue" draggable="true">Continuiamo con gli elementi...</p>
+    <!-- i global attribute si possono inserire in ogni elemento-->
+    <span onclick="console.log('Ciao a tutti')"> questo </span><span>è </span><span>in linea</span>
+    <!-- nella console appare il messaggio "Ciao a tutti"  ogni click sulla parola "questo"-->
+    <h2>I colori:</h2>
+    <p style="color:chartreuse"> verde fluo</p>
+    <p style="color: #7FFF00;"> verde</p>
+    <p style="color: hsl(90,100%,50%);">verde hsl</p>
+    <p style="color:rgb(128, 255,0)">verde rgb (128,255,0)</p>
+    <!-- le due più standard sono rgb e esadecimale #-->
+    <!-- data-attributes (data-indirizzo o data-id) permettono di creare attributi propri senza che html lo rilevi come parola chiave-->
+    <span> <b>mandami </b></span> <br> <span> <i>a capo</i></span><br>
+    <hr>
+    <span><strong>io sono strong </strong></span><span><em>io sono emphasis</em></span>
+    <!-- differnza tra b e strong: lo strong ha valore semantico(parola importante per il contesto) mentre b non lo ha)-->
+
+    <blockquote>
+        <p>Questo è un blocco di citazione</p>
+        <p>"io sono tuo padre"</p>
+    </blockquote>
+    <code>testo che riporta del codice</code><br>
+    <hr>
+    <strong>apici e pedici</strong><br>
+    H<sub>2</sub>O <br> <!-- apice e pedice-->
+    E = mc<sup>2</sup>
+    <br>
+    <hr>
+    il tag &lt;div&gt; serve per raggruppare elementi in blocchi mentre il tag &lt;span&gt; serve per raggruppare
+    elementi in linea.
+    <!-- & (entities) permettono di inserire quei caratteri speciali che non possono essere scritti direttamente-->
+    <!--<script>alert("Ciao Bello")</script>-->
+    <hr><br>
+
+    <h2>Liste Non Ordinate (ul)</h2>
+    <ul style="list-style-type: square;">
+        <li>Primo elemento</li>
+        <li>Secondo elemento</li>
+        <ul>
+            <li>elemento annidato 1</li>
+            <li>elemento annidato 2</li>
+        </ul>
+        <li>Terzo elemento</li>
+    </ul>
+    <hr><br>
+    <h2>Liste Ordinate (ol)</h2>
+    <ol style="list-style-type:lower-alpha;">
+        <li>Primo elemento</li>
+        <li>Secondo elemento</li>
+        <ol style="list-style-type: upper-roman;">
+            <li>elemento annidato 1</li>
+            <li>elemento annidato 2</li>
+        </ol>
+        <li>Terzo elemento</li>
+    </ol>
+    <hr><br>
+    <h2>Liste di definizione (dl)</h2>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Hypertext markup language</dd>
+        <dt>CSS</dt>
+        <dd>Cascading style sheets</dd>
+        <dt>JS</dt>
+        <dd>JavaScript</dd>
+    </dl>
+    <br><hr>
+    <h2>Le Tabelle</h2>
+    <table border="1">  <!-- border è un attributo deprecato-->
+        <caption>Tabella dei prodotti</caption>
+        <!-- descrizione della tabella, va messo fuori il thead-->
+        <thead>
+            <tr>
+                <th>Codice</th>
+                <th>Categoria</th>
+                <th>Descrizione</th>
+                <th>Prezzo</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>001</td>
+                <td rowspan="2">Elettrodomestici</td>
+                <td>Prodotto A</td>
+                <td>10.00 €</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <!--<td>Elettrodomestici</td>-->  <!-- rimossa per via del rowspan che incorpora più righe in un unico elemento-->
+                <td>Prodotto B</td>
+                <td>15.50 €</td>
+            </tr>
+            <tr>
+                <td>003</td>
+                <td>Accessori</td>
+                <td>Prodotto C</td>
+                <td>5.00 €</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Totale</td>
+                <!--<td></td>
+                <td></td>-->  <!--rimossi per via del colspan-->
+                <td>30.00 €</td>
+            </tr>
+        </tfoot>
+    </table>
+    <hr><br>
+    <h2>I Link</h2>
+    <!--Interni-->
+    <a href="../lezione1/lezione1.html">Lezione 1</a> <!-- i doppi punti (../) tornano indietro nel percorso di 1 livello(quindi va a finire in "lezione1")-->
+    <br>
+    <a href="/lezioni/lezione1/lezione1.html">Link alla lezione 1</a><!-- lo (/) richiama la cartella root (in questo caso è "lezioni")  RICORDARSI di aprire le folder necessarie-->
+    <br>
+    <a href="./lezione2.html">Link a se stesso</a> <!-- il punto singolo (./) richiama la cartella corrente-->
+    <br>
+    <!--Esterni-->
+    <a href="https://google.it" target="_blank" rel="nofollow">Google</a> <!-- _blank apre il link in una nuova scheda -->
+    <br>
+    <!--Attributo target-->
+    <a href="mailto:info@enaip.org">Inviami una mail</a><br>
+    <a href="tel:+390412345678">Chiamami</a><br>
+    <a href="https://wa.me/+393331234567">WhatsApp</a><br>
+    <a href="https://t.me/+393331234567">Telegram</a><br>
+    <!-- ancora(anchor) (stessa pagina)-->
+     <a href="#top">torna su</a>
+
+     <!-- muoversi nel terminal di vscode -->
+        <!-- cd = change directory -->
+        <!-- .. = su directory superiore-->
+        <!-- / = dalla root del sito-->
+        <!-- . = directory corrente-->
+
+    
+
+</body>
+
+</html>
