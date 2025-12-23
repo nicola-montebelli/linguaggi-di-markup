@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Elementi html</title>
     <!-- creare un layout completo con:
      -nav con menu di 3 elementi a scelta(con anchor a notizie, contatti, storia)
      -header, main, sezione ultime notizie con 4 articoli
@@ -15,12 +15,12 @@
      -socket con credits-->
      
 </head>
-<body>
+<body id="top">
     <nav>
         <ul>
             <li><a href="#notizie">Notizie</a></li>
-            <li><a href="#contatti">Contatti</a></li>   <!-- non funzionanti da controllare-->
             <li><a href="#storia">Storia</a></li>
+            <li><a href="#fondo-pagina">Contatti</a></li>
         </ul>
     </nav><br>
     <header>
@@ -77,7 +77,7 @@
                 </tr>
             </table>
         </section><hr>
-        <section id="contatti">
+        <section id="areatxt">
             <form action="http://localhost/linguaggi-di-markup-25-26/contatti.php" method="post">
                 
                 <label for="name"></label>
@@ -97,7 +97,8 @@
                 <button type="submit">Invia</button>
             </form>
         </section>
-        <section id="storia">
+        
+        <section id="storia" style="margin-top: 100%;"> <!-- margin-top: valore per creare un margine -->
                 <h2>La nostra storia</h2>
                 <ul>
                     <li>La nostra storia inizia nel 1990</li>
@@ -107,15 +108,25 @@
                     <li>La nostra storia si evolve nel 2030</li>
                     <li>La nostra storia continua nel 2040</li>
                 </ul>
+                
         </section>
 
-        <footer>
+        <footer style="margin-top: 500px;">
             <section id="fondo-pagina">
                 <img src="../lezione3/immagini prodotti/peperoncini.jpg" alt="logoAziendale" style="max-width: 80px;">
                 <small> PeperonciniNews s.r.l</small>
                 <address>Via Dei Baluardi Cacofonici 44, 47924 Rimini(RN), Italia</address>
+                
+                    <a href="sitemap.php">Sitemap</a>
+                    <a href="privacy-policy.php">Privacy Policy</a>
+                    <a href="cookie-policy.html">Cookie Policy</a> 
             </section>
         </footer>
+        <div id="credenziali">
+            Crediti:
+            <a href="https://www.webagency.it" target="_blank">Web Agency</a>
+            <a href="#top" style="float:right; text-align: right;">Torna su</a>
+        </div>
     </main>
     
 </body>
