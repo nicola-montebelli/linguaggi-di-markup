@@ -1,1 +1,20 @@
-/**/
+ #scacchiera div.riga div{
+    display: inline-block; /*inline-block pone in linea un blocco di elementi che hanno questo attributo*/
+}
+#scacchiera div.bianco, #scacchiera div.nero{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+} 
+#scacchiera div.riga, img{
+    width: 100%;
+}
+.bianco{
+    background-color: white;
+}
+.nero{
+    background-color:rgb(54, 52, 52)
+}
+/* #scacchiera img{
+    max-width: 100%;
+} */
