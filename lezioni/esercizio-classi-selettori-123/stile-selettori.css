@@ -1,0 +1,48 @@
+li.li1, li.li2, li.li3, li.li4{
+    color: red;  
+}/*primo esercizio*/
+
+.giallo{
+    color: yellow;
+}
+#principale{
+    color: green;
+}
+.sfondo-arancio{
+    background-color: darkorange;
+}
+
+@media (max-width: 576px){
+    .sfondo-arancio{
+        color: white;
+        background-color: #e1bee7 ;
+    }
+}
+@media (min-width: 768px){
+    .sfondo-arancio{
+        background-color: #ba68c8 ;
+    }
+}
+@media(min-width: 992px){
+    .sfondo-arancio{
+        color: white;
+        background-color: #9c27b0;
+    }
+}
+@media(min-width: 1200px){
+    .sfondo-arancio{
+        
+        background-color: #7b1fa2;
+    }
+} /*secondo esercizio*/
+
+h2.titolo-notizia{
+    color: #57c4e5;
+}
+.foto{
+    width: 100px;
+}
+.corpo-notizia{
+    background-color: #edf2ef;
+        
+}

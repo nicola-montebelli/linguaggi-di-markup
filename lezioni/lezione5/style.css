@@ -1,3 +1,15 @@
+:root{
+    --colore-primario: #9d6754;
+    --colore-secondario: #adbabd;       /*css custom properties */
+    --colore-info: #5a5766;
+    --size-font-base: 16px; 
+}
+
+html{
+    color:var(--colore-primario);
+    font-size: var(var(--size-font-base));  /* varibili delle custom properties*/ 
+}
+
 /*mobile first*/
 h1 {
     color: blue;
@@ -25,4 +37,47 @@ h2{
     h2 {
         color: fuchsia;
     }
+}
+
+table td, table th{     /* selettori combinatori o di relazione*/
+    border: 1px solid black;
+    padding: 0.5rem;
+}
+table th{
+    background-color: lightgray;
+}
+nav#menu-principale li{
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: inline;
+    margin-right: 1rem;
+}
+li#selected{
+    text-decoration: underline;
+    color: darkorange;
+}
+article ul>li{      /*ul discendente di article i cui figli diretti li*/
+    color: tomato;
+}
+article ul li + li{ 
+    color: teal;
+}
+ul li ~ li{
+    text-decoration: overline;
+}
+#titoli-fratelli h2+h2{
+    border: 2px solid blue;
+}
+#titoli-fratelli h2~h2{
+    background-color: lightblue;
+}
+div[lang="en"]{     /*selettori di attibuto*/
+    font-style: italic;
+}
+div[lang="it"]{
+    text-decoration: wavy underline;
+}
+div[lang]{
+    font-size: 1.5rem;
 }
