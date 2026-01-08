@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione 5 su CSS</title>
+    <link rel="stylesheet" href="style.css"> <!-- richiamare il file css esterno. E' quella più consigliata da usare-->
+    <style>
+        /*@import url('style.css'); /*richiama il file css esterno*/ /*NON funziona se non è la prima riga del tag style*/
+        html{
+            font-size: 20px; /*html è il root element (rem)*/
+        }
+        h3{
+            color: green;
+        }
+    </style>
+</head>
+<body style="font-size: 16px;">
+    <h1>Titolo principale</h1>
+    <h2>Titolo secondario</h2>
+    <h3 style="border: 0.5rem dashed purple; display: inline;">Un altro titolo</h3> <!-- il colore di un elemento è quello dell'ultimo attributo dichiarato e così vale anche per altri attributi-->
+    <!-- 0.5 rem dimezza il valore font size del root cioè html a cui abbiamo assegnato 20 px-->
+
+    <hr>
+    <h1>Specificità</h1>
+    <h2 class="importante" id="primo">Sottotitolo con ID e CLASS</h2>  <!-- notare su style.css le specificità .class e #id (.importante e #primo)-->
+    <h2 class="importante">Sottotitolo con CLASS</h2>
+    <h2>Sottotitolo senza ID e senza CLASS</h2>
+</body>
+</html>

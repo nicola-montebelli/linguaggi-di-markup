@@ -1,0 +1,19 @@
+/*desktopfirst*/
+h2{
+    color: rgb(0, 2, 5);
+}
+@media(max-width: 1199.98px){
+    h2{
+        color: green;
+    }
+}
+@media(max-width: 991.98px){
+    h2{
+        color: orange;
+    }
+}
+@media(max-width: 575.98px){
+    h2{
+        color: red;
+    }
+}

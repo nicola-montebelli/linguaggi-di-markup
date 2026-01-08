@@ -1,0 +1,28 @@
+/*mobile first*/
+h1 {
+    color: blue;
+}
+#primo{
+    color: gray;
+}
+.importante{
+    color: brown; /*!!!! se si pone il cursore su .importante si notano 3 valori (0 1 0) i quali si basano su id classe elemento*/
+}
+h2{
+    color: red;     
+}
+@media (min-width: 576px){      /*con @media cambiano gli attributi di un elemento in base alla grandezza del dispositivo che si andrà ad usare*/
+    h2{
+        color: orange;
+    }
+}
+@media (min-width: 992px) { 
+    h2 {
+        color: green;
+    }
+}
+@media (min-width: 1200px) { 
+    h2 {
+        color: fuchsia;
+    }
+}
