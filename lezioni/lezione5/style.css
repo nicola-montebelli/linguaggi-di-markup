@@ -67,12 +67,12 @@ ul li ~ li{
     text-decoration: overline;
 }
 #titoli-fratelli h2+h2{
-    border: 2px solid blue;
+    border: 2px solid blue;     /*imposta le regole ai fratelli  immediatamente ADIACENTI (saltando il primo elemento degli elementi adiacenti) */
 }
 #titoli-fratelli h2~h2{
-    background-color: lightblue;
+    background-color: lightblue;    /*imposta le regole a TUTTI i fratelli successori*/
 }
-div[lang="en"]{     /*selettori di attibuto*/
+div[lang="en"]{     /*selettori di attributo*/
     font-style: italic;
 }
 div[lang="it"]{
