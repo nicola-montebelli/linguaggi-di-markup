@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
-
+<style>
+    table, th, td {      /*stile per la tabella*/
+    border: 1px solid black;
+}
+</style>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="La descrizione 'forse' suggerita da mdr">
     <title>Lezione 2</title>
+}
 </head>
 
 <body>
@@ -34,7 +39,9 @@
     <hr>
     <strong>apici e pedici</strong><br>
     H<sub>2</sub>O <br> <!-- apice e pedice-->
-    E = mc<sup>2</sup>
+    E = mc<sup>2</sup> <br>
+    <strong>Abbreviazioni e Acronimi</strong>
+    <p>In questa guida approfondiamo l'<abbr title="HyperTextMarkup Language">HTML</abbr>e ne esploriamo i tag e le potenzialità espressive.</p>
     <br>
     <hr>
     il tag &lt;div&gt; serve per raggruppare elementi in blocchi mentre il tag &lt;span&gt; serve per raggruppare
@@ -76,7 +83,7 @@
     </dl>
     <br><hr>
     <h2>Le Tabelle</h2>
-    <table border="1">  <!-- border è un attributo deprecato-->
+    <table>  <!-- border="1" è un attributo deprecato-->
         <caption>Tabella dei prodotti</caption>
         <!-- descrizione della tabella, va messo fuori il thead-->
         <thead>
