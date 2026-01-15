@@ -31,10 +31,10 @@ li.li1, li.li2, li.li3, li.li4{
 }
 @media(min-width: 1200px){
     .sfondo-arancio{
-        
         background-color: #7b1fa2;
     }
-} /*secondo esercizio*/
+} 
+/*secondo esercizio*/
 
 h2.titolo-notizia{
     color: #57c4e5;
@@ -43,6 +43,18 @@ h2.titolo-notizia{
     width: 100px;
 }
 .corpo-notizia{
-    background-color: #edf2ef;
-        
+    background-color: #edf2ef;   /*p*/
 }
+.testo-grande{
+    font-size: 2rem;    /*font size del p*/
+}
+span, h1, .corpo-notizia{
+    color: #212738;
+}
+.thumbnail{
+    width: 125px;   /* grandezza della prima e terza immagine*/
+} 
+#prima{
+    color: #F97068; /* id dell'h2 della prima notizia*/
+}
+/*terzo esercizio*/
