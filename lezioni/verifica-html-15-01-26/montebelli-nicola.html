@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifica HTML5 del 15.01.26</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5</h1>
+        <h2>Verifica di Struttura, Tabelle e Form</h2>
+        <nav>
+            <ul>
+                <li> <a href="#intro">Introduzione</a></li>
+                <li><a href="#tabella">Tabella</a></li> <!-- anchor per le varie section della pagina-->
+                <li><a href="#form">Form</a></li>
+                <li><a href="#articolo">Articolo HTML5</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <section id="intro">        <!--sezione #introduzione-->
+        <h3>Introduzione</h3>
+        <p>Pagina di verifica HTML5</p>
+    </section>                  <!--fine sezione #introduzione-->
+    <hr>
+    <section id="tabella">      <!-- sezione #tabella-->
+        <h1>Catalogo Prodotti</h1>  
+        <table border="1">  <!-- inizio della tabella-->
+            <caption> <h3>Listino Prodotti</h3> </caption>    <!--caption tabella-->                               
+            <thead style="background-color: orangered;">    <!--colore header oranged-->
+            <tr>
+                <th>Prodotto</th>
+                <th>Prezzo</th>         <!--elementi header-->
+                <th>Disponibilità</th>
+                <th>Note</th>
+            </tr>
+        </thead>        <!--fine header della tabella-->
+        <tbody>         
+            <tr style="background-color: aqua;">    <!--prima riga colore aqua-->
+                <td><b>Mouse</b></th>
+                <td>15€</th>
+                <td>Disponibile</th>
+                <td rowspan="2">Accessori PC</th>
+            </tr>
+            <tr>                                        <!--seconda riga-->
+                <td>Tastiera</td>           
+                <td>25€</td>
+                <td>Disponibile</td>
+            </tr>
+            <tr style="background-color: aqua;">        <!--terza riga colore aqua-->
+                <td>Monitor</td>
+                <td>150€</td>
+                <td>Esaurito</td>
+                <td>Display</td>
+            </tr>
+            <tr>                                            <!-- quarta riga-->
+                <td colspan="2"><b>Notebook</b></td>        
+                <td>Disponibile</td>
+                <td>Portatile</td>
+            </tr>
+         </tbody>       <!-- fine body della tabella-->
+         <tfoot> 
+            <tr>
+                <td colspan="2"><a href="http://www.example.com">www.example.com</a></td>
+                <td colspan="2">Catalogo 2025</td>
+            </tr>          
+            <tr>
+                <td colspan="4" style="text-align: center;"> © Azienda Demo</td>
+            </tr>
+         </tfoot>           <!-- fine footer della tabella-->
+        </table>            <!-- fine tabella-->
+        <hr>
+    </section>              <!-- fine sezione #tabella-->
+    <section id="form">     <!--sezione #form-->
+        <h3>Iscrizione al Corso</h3>
+        <form action="http://localhost/form.php" name="myform" method="get">
+            <fieldset> <legend>Dati Anagrafici</legend>                     <!--Dati Anagrafici-->
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="name" placeholder="Nome" autocomplete="off">
+
+                <label for="cognome">Cognome:</label>
+                <input type="text" id="cognome" name="surname" placeholder="Cognome" autocomplete="off">
+            </fieldset>
+            <fieldset><legend>Contatti</legend>                             <!-- Contatti-->
+                <label for="mail">Email:</label>
+                <input type="email" id="mail" name="email" required="true">
+
+                <label for="telefono">Telefono:</label>
+                <input type="tel" id="telefono" name="phone">
+            </fieldset>
+            <fieldset> <legend>Residenza</legend>                           <!--Residenza-->
+                <label for="stato">Stato:</label>
+                <select name="statochck" id="stato">
+                    <optgroup label="Europa">
+                        <option value="it">Italia</option>
+                        <option value="sp">Spagna</option>
+                        <option value="fr">Francia</option>
+                        <option value="gr">Germania</option>
+                    </optgroup>
+                    <optgroup label="Asia">
+                        <option value="ch">Cina</option>
+                        <option value="th">Thailandia</option>
+                        <option value="gp">Giappone</option>
+                    </optgroup>
+                </select>
+            </fieldset>
+            <fieldset><legend>Dati Personali</legend>                       <!--Dati Personali-->
+                <label for="mese-anno">Mese e Anno:</label>
+                <input type="month" id="mese-anno" name="data">
+
+                <label for="colore">Colore preferito:</label>
+                <input type="color" id="colore" name="color">
+
+                <label for="età">Età:</label>
+                <input type="number" id="età" name="numero" min="18" max="99" placeholder="18-99">
+            </fieldset>
+            <fieldset><legend>Dati di Gradimento</legend>               <!--Gradimento-->
+                <label for="voto">Voto:</label>
+                <input type="range" id="voto" name="gradimento" min="1" max="10" value="5" step="1">
+            </fieldset>
+            <fieldset> <legend>Preferenze Sportive</legend>             <!-- Preferenze Sportive-->
+                <label for="sport">Sport preferito:</label>
+                <input list="sport-preferito">
+                    <datalist id="sport-preferito">
+                        <option value="Calcio"></option>
+                        <option value="Tennis"></option>
+                        <option value="Basket"></option>
+                        <option value="Nuoto"></option>
+                    </datalist>
+            </fieldset>
+            <fieldset> <legend>Commenti</legend>                        <!--Commenti-->
+                <label for="messaggio" hidden>Scrivi:</label>
+                <textarea name="areatesto" id="testo" cols="50" rows="5" maxlength="150"></textarea>
+            </fieldset>
+            <button type="submit">Invia</button>                    <!--pulsante Invio-->
+        </form>                                 <!--fine sezione #Form-->
+    </section>
+    <section id="articolo" style="margin-top: 500px;">
+        <hr>        <!--sezione #articolo--> <!-- il margin-top serve per verificare il funzionamento dell'anchor #articolo-->
+        <article>
+            <header>
+                <h3>Articolo HTML5</h3>
+                <h4>Social Media e Web Marketing Manager</h4>
+                <p>La risorsa si occuperà della gestione di contenuti web e social utilizzando tecncologie HTML5</p>
+            </header>
+            <footer>
+                <details>
+                    <summary>Approfondimenti</summary>      <!-- details con 2 link-->
+                    <p><a href="http://www.google.it">Vai alla pagina web</a></p>
+                    <p><a href="http://webagency.it">I nostri sponsor</a></p>
+                </details>
+                <small>Autore <i>Nicola Montebelli - Studente</i></small>
+            </footer>
+        </article>
+    </section>    <!--fine sezione #articolo-->
+</body>
+</html>
