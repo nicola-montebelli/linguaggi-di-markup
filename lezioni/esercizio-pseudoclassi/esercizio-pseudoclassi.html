@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizio Pseudoclassi 22.01.2026</title>
+    <link rel="stylesheet" href="esercizio-pseudoclassi.css">
+</head>
+<body>
+    <!-- 
+    1. creare un layout semplice:
+    un div di dimensione (width, height) 300px * 300px
+    definire delle regole per cui:
+    da 576 il div rimane 300x300 di colore azzurro
+    da 768 il div diventa 450x450 di colore pink
+    da 992 il div diventa 600x600 di colore orange
+    da 1200 il div diventa 750x750 di colore green
+
+    2. aggiungere prima del div un article con titolo e contenuto (h3, p)
+        inserire dentro l'article un link (a) di approfondimento di colore green
+
+    3. aggiungere in fondo un footer
+        inserire dentro al footer un link (a) con indicato 
+        sviluppato da + vs nome di colore grigio
+
+    4. verificare che colore del link dell'articolo non sia stato modificato!-->
+    <section class="titolo">
+        <article>
+            <h3>Esercizi su CSS e pseudoclassi</h3>
+            <p>Controllare su github del prof per vedere le consegne</p>
+            <a href="https://github.com/docentemaurocasadei/linguaggi-di-markup-25-26/blob/main/esercizi_20260122.txt">Github del prof</a>
+        </article>
+    </section>
+    <div id="div1">
+        <p>Questo è un div</p>
+    </div>
+    <footer>
+        <a href="https://github.com/docentemaurocasadei/linguaggi-di-markup-25-26/blob/main/esercizi/%24_layout_responsive_easy.html/layout_responsive_easy.html">Sviluppato da</a>
+    </footer>
+    <hr>
+    <!-- A.creare un titolo 
+    creare una classe per determinare un font size doppio tramite pseudoelemento alla sola prima lettera:
+
+    altro esercizio B.
+    - aggiungere dentro ad una section 2 p e al primo p uno pseudoelemento che rende grassetto la prima linea
+    - impostare al primo elemento p della section una proprietà max-width 50% e al secondo maxwidth 80%
+
+    altro esercizio C.
+    - aggiungere un minus (-) prima di ogni p con pseudoelemento before-->
+
+    <header id="titolo2">
+        <h2>Esercizio con pseudoelementi e pseudoclassi</h2>
+    </header>
+    <section id="paragrafi">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur perferendis accusantium temporibus consectetur officia et corporis, dicta molestiae recusandae aliquid quisquam, ratione at ad magni asperiores unde provident autem ducimus!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eligendi nostrum aut facilis porro incidunt voluptate! rum?</p>
+    </section>
+    <hr>
+
+    <!-- creare un menu ul con li con all'interno del link (home | chi siamo | dove siamo) che avranno link a medesime pagine in linea
+    padding 0.5em e pseudoclassi in modo da:
+    - colorare lo sfondo del primo elemento di fuxia e font colore bianco
+    - colorare di verde all'hover di un link
+    - colorare di grigio al visited di un link -->
+    <ul id="referenze">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./chi-siamo.html">Chi Siamo</a></li>
+        <li><a href="./dove-siamo.html">Dove Siamo</a></li>
+    </ul>
+    
+</body>
+</html>

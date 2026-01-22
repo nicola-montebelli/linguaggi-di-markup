@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box; /*tutti gli elementi(*) hanno caratteristica border-box (per l'argomento slide 150)*/
+}
+section#pseudo div:nth-child(3){
+    box-sizing: border-box;
+}
+section#pseudo div:nth-child(4){
+    box-sizing: content-box;
+}
+div{
+    width: 10em;
+    height: 10em;
+    border: 5px dashed black;
+    display: inline-block;
+    padding: 2em;
+    text-align: justify;
+    margin: 1em;
+    /*overflow: hidden; /*nasconde cioè che fuoriesce*/
+    overflow: scroll; /*permette di scrollare per vedere il contenuto che normalmente fuoriesce*/
+}
+div:hover{
+    background-color: yellow;   /*colore al passaggio del mouse*/
+}
+p::first-letter{    /*la prima lettera di ogni p*/
+    font-size: 200%;
+    color: red;
+    font-weight: bold;
+}
+section#pseudo p:first-child::first-letter{ /*la prima lettera del primo p figlio di section con id #pseudo*/
+    font-size: 200%;
+    color:purple;
+    font-weight: bold;
+}
+section#pseudo div:first-child{     /*first-child è appunto il primo figlio(elemento) di un elemento padre(section)*/
+    background-color: lightblue;
+}
+a:link{
+    color: green;
+}
+a:active{
+    color: red;
+}
+a:visited{
+    color: pink;    /*i link visitati si colorano di rosa*/
+}
+nav#footer a{
+    display: inline-block;
+}
+nav#footer a:nth-child(1){  /*figlio n-esimo*/
+    font-weight: bold;
+    font-size: 300%;
+}
+nav#footer a:nth-last-child(1){ /*l'ultimo elemento a (considerando dal fondo all'inizio)*/
+    border: 3px solid pink;
+}
+/* table tr:nth-child(even){   /*tutti i tr pari vengono colorati
+    background-color: orangered;
+} */
+table.zebrata tr:nth-child(2n+3){   /*colora ogni 2 righe partendo però dalla terza*/
+    background-color: lightgreen;
+}
+table.zebrata tr:nth-child(2n+2){   /*con le pseudoclassi se dovessimo aggiungere delle righe la regola rimarrebbe impostata e colorerebbe le righe in modo alternato*/
+    background-color: lightskyblue;
+}
+table tr:first-child{
+    background-color: lightgray;
+}
+table.zebrata tr:hover:not(:first-child){  /*colora di violetto la riga su cui si passa col mouse, tranne la prima*/
+    background-color: violet;
+    color: blue;
+}
+input:enabled:hover{
+    background-color: lightgreen;
+}
+button:hover{
+    color: peru;
+    background-color: lime;
+}
+input:disabled{
+    visibility: hidden;
+}
+input:checked + label{  /*colore e bold al checked*/
+    font-weight: bold;
+    color: red;
+}
+input:checked:after{    /*imposta le regole :before o :after un certo evento*/
+    content: " ✔";
+    color: green;
+    margin-left: 12px;
+}
+img{
+    width:200px;
+    margin: 0 auto; /*top-bottom(0) left-right(auto)*//*auto calcola da solo la dimensione*//*min-max-width e min-max-height bloccano un valore min o max di altezza o grandezza e l'elemento non andrà oltre quelli*/
+    display: block; /*se l'elemento non è di blocco*/
+    border-radius: 100px; /*per sbordare gli elementi*/
+    border: 1px solid red;
+    padding: 2px;
+}
+input{
+    outline: 1px dashed blue;/*quella attorno ai form input text*/
+}
+input:checked{
+    accent-color: red;
+}

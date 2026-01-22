@@ -1,0 +1,66 @@
+div#div1{
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+}
+
+@media(min-width: 576px){
+    div#div1{
+        background-color: lightblue;
+        width: 300px;
+        height: 300px;
+    };
+}
+@media(min-width:768px){
+    div#div1{
+        background-color: pink;
+        width: 450px;
+        height: 450px;
+    }
+}
+@media(min-width:992px){
+    div#div1{
+        background-color: orange;
+        width: 600px;
+        height: 600px;
+    }
+}
+@media(min-width:1200px){
+    div#div1{
+        background-color: green;
+        width: 750px;
+        height: 750px;
+    }
+}   /*1. consegna*/
+
+section.titolo a{
+    color: green;
+}   /*2. consegna*/
+footer a{
+    color: grey;
+}/*3.consegna*/
+footer a:visited{
+    color: grey;
+} /*4. consegna*/
+/*---------------------------------------------------------*/
+
+header#titolo2 h2::first-letter{
+    font-size: 2em;
+}   /*A. consegna*/
+section#paragrafi p:first-child:first-line{
+    font-weight: bold;
+}
+section#paragrafi p:first-child{
+    max-width: 50%;
+}
+section#paragrafi p:nth-child(2){
+    max-width: 80%;
+}  /*B. consegna*/
+section#paragrafi p:first-child::before{
+    content: "- ";
+}
+section#paragrafi p:last-child::before{
+    content: "- ";
+}       /*C. consegna*/
+/*---------------------------------------------------------*/
+
