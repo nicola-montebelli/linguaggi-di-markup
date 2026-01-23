@@ -1,5 +1,5 @@
 *{
-    box-sizing: border-box; /*tutti gli elementi(*) hanno caratteristica border-box (per l'argomento slide 150)*/
+    box-sizing: border-box; /*tutti gli elementi(*) hanno caratteristica border-box (per l'argomento slide 153)*/
 }
 section#pseudo div:nth-child(3){
     box-sizing: border-box;

@@ -23,7 +23,9 @@
         inserire dentro al footer un link (a) con indicato 
         sviluppato da + vs nome di colore grigio
 
-    4. verificare che colore del link dell'articolo non sia stato modificato!-->
+    4. verificare che colore del link dell'articolo non sia stato modificato!
+    5. aggiungere max-width al div in modo che non superi mai la larghezza dello schermo-->
+    
     <section class="titolo">
         <article>
             <h3>Esercizi su CSS e pseudoclassi</h3>
@@ -57,16 +59,110 @@
     </section>
     <hr>
 
-    <!-- creare un menu ul con li con all'interno del link (home | chi siamo | dove siamo) che avranno link a medesime pagine in linea
+    <!-- D. creare un menu ul con li con all'interno del link (home | chi siamo | dove siamo) che avranno link a medesime pagine in linea
     padding 0.5em e pseudoclassi in modo da:
-    - colorare lo sfondo del primo elemento di fuxia e font colore bianco
-    - colorare di verde all'hover di un link
-    - colorare di grigio al visited di un link -->
+    D1.- colorare lo sfondo del primo elemento di fuxia e font colore bianco
+    D2.- colorare di verde all'hover di un link
+    D3.- colorare di grigio al visited di un link -->
     <ul id="referenze">
-        <li><a href="./home.html">Home</a></li>
-        <li><a href="./chi-siamo.html">Chi Siamo</a></li>
-        <li><a href="./dove-siamo.html">Dove Siamo</a></li>
+        <li class="primo lista"><a href="./home.html">Home</a></li>
+        <li class="lista"><a href="./chi-siamo.html">Chi Siamo</a></li>
+        <li class="lista"><a href="./dove-siamo.html">Dove Siamo</a></li>
     </ul>
+    <hr>
+
+    <!-- E.creare una pagina con 2 immagini
+    alla prima assegnare max-width: 100% e alla seconda width: 100% e notare la differenza in responsive  -->
+    <section id="confronto">
+        <h2>Immagine con max-width 100%</h2>
+        <img src="./elicottero.png" alt="elicottero" class="mw">   
+        <br>
+        <h2>Immagine con width 100%</h2>
+        <img src="./elicottero.png" alt="elicottero" class="w">
+    </section>
+
+    <!-- F.creare una section con un p e all'interno un testo e:
+    - impostare un background verde chiaro alla section
+    - impostare alla section un margine inferiore 1em
+    - impostare al p un padding 1em in tutte le direzioni
+    - impostare un background azzurro chiaro alla p
+    - impostare al p un margine
+        - alto e basso 15px
+        - sinistro e destro 10%
+    - mettere al p una proprietà border: 3px dotted black
+
+    visualizzare il risultato
     
+    - impostare u padding al p di 1em in tutte le direzioni
+
+    altro esercizio G.
+    - impostare un max-width:90% alla section (con una classe)
+    - impostare un max-width:80% alla section su mediaquery >760px (con una classe)
+    - mettere la section centrata nella pagina
+
+    altro esercizio H.
+    - duplicare la section e alla seconda section attribuire un box-sizing: border-box visualizzare il risultato-->
+    <section class="testo">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nihil, alias suscipit at perspiciatis reprehenderit laudantium velit impedit architecto rerum dolorem dolore dicta magnam vel dignissimos illum ullam! Esse, unde!</p>
+    </section>
+    <section class="testo box">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic, nihil, alias suscipit at perspiciatis reprehenderit laudantium velit impedit architecto rerum dolorem dolore dicta magnam vel dignissimos illum ullam! Esse, unde!</p>
+    </section>
+    <hr>
+    <!-- I.creare un menu ul con li con all'interno del link (home | chi siamo | dove siamo | contatti) che avranno link a medesime pagine in linea
+    padding 0.5em e pseudoclassi in modo da:
+    - L.colorare il primo e l'ultimo elemento con background pink e testo bianco
+
+    altro esercizio sempre con medesimo elenco M.
+    - colorare gli elementi pari con sfondo nero e testo bianco e i dispari con sfondo verde e testo bianco
+    - verificare che continuando ad aggiungere elementi si colorino nella stessa modalità
+
+    N.assegnare agli ultimi 2 elementi una classe 'piccoli' e aumentare la proprietà font-size a 1.5em di tutti quelli che non hanno tale classe-->
+    <nav id="linkvari">
+        <ul>
+        <li><a href="./elementi-ul/homepage.html">Home</a></li>
+        <li><a href="./elementi-ul/chisiamo.html">Chi Siamo</a></li>
+        <li><a href="./elementi-ul/dovesiamo.html">Dove siamo</a></li>
+        <li><a href="./elementi-ul/contatti.html">Contatti</a></li>
+        <li><a href="./elementi-ul/contatti.html">Comincio ad</a></li>
+        <li class="piccoli"><a href="./elementi-ul/contatti.html">Aggiungere</a></li>
+        <li class="piccoli"><a href="./elementi-ul/contatti.html">Elementi</a></li>
+    </ul>
+    </nav>
+    <hr>
+
+    <!-- creare un form con 
+    fieldset dati accesso
+    - input text name=codice - disabled
+    - input text name=nome
+    - input password name=password
+    fieldset interessi
+    - input checkbox name=cinema
+    - input checkbox name=teatro
+    - input checkbox name=sport
+
+    O.impostare sfondo grigio scuro ad input disabled
+    P.impostare font-size doppio alla label di un input checked e colore tomato-->
+
+        <form action="">
+            <fieldset class="datiaccesso" style="display: inline;">
+                <legend>Dati Accesso</legend>
+                <label for="code"></label>
+                <input type="text" id="code" name="codice" disabled>
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </fieldset>
+            <fieldset class="interessi" style="display: inline;">
+                <legend>Interessi</legend>
+                <input type="checkbox" name="cinema" id="cinema">
+                <label for="cinema">Cinema</label>
+                <input type="checkbox" name="teatro" id="teatro">
+                <label for="teatro">Teatro</label>
+                <input type="checkbox" name="sport" id="sport">
+                <label for="sport">Sport</label>
+            </fieldset>
+        </form>
 </body>
 </html>

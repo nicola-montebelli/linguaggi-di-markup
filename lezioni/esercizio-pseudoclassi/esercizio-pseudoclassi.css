@@ -2,7 +2,9 @@ div#div1{
     width: 300px;
     height: 300px;
     border: 1px solid black;
-}
+    max-width: auto;
+    max-height: auto;/*5. consegna*/
+}   
 
 @media(min-width: 576px){
     div#div1{
@@ -42,7 +44,7 @@ footer a{
 footer a:visited{
     color: grey;
 } /*4. consegna*/
-/*---------------------------------------------------------*/
+/*--------------------------------------------------------- es. layout responsive*/
 
 header#titolo2 h2::first-letter{
     font-size: 2em;
@@ -62,5 +64,86 @@ section#paragrafi p:first-child::before{
 section#paragrafi p:last-child::before{
     content: "- ";
 }       /*C. consegna*/
-/*---------------------------------------------------------*/
-
+/*---------------------------------------------------------es. menu pseudoelementi*/
+ul#referenze li.primo a:first-child{
+    background-color: fuchsia;
+    color: white;
+    display: inline;
+}       /*D1 consegna*/
+ul#referenze li.lista a:hover{
+    background-color: green;
+    display: inline;
+}       /*D2 consegna*/
+ul#referenze li a:visited{
+    color: gray;
+}       /*D3 consegna*/
+/*-------------------------------------------------------es. menu pseudoclassi*/
+section#confronto img.mw{   /*100% della risoluzione dell'immagine*/
+    max-width: 100%;
+}
+section#confronto img.w{    /*100% della dimensione dello schermo indipendentemente dallo schermo*/
+    width: 100%;
+}       /*E. consegna*/
+/*----------------------------------------------------es.max-width*/
+section.testo{
+    margin-bottom: 1em;
+    background-color: lightgreen;
+}
+section.testo p{
+    padding: 1em; /*1 valore per i 4 lati*/
+    margin: 15px 10%;        
+    border: 3px dotted black;
+    background-color: lightblue;
+}       /*F. consegna*/
+section.testo{
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto; /*per centrare gli elementi*//*chiedere al prof per chiarimenti*/
+}
+@media screen and(min-width: 760px){
+        section.testo{
+            max-width: 80%;
+        }
+}/*G. consegna*/
+section.box{
+    box-sizing: border-box;                 /*da chiedere al prof per differenze*/
+}/*H. consegna*/
+/*------------------------------------------es. box model*/
+nav#linkvari ul li{
+    display: inline;
+    padding: 0.5em;
+}/*I. consegna*/
+/* nav#linkvari ul li:first-child{
+    background-color: pink;
+}
+nav#linkvari ul li:last-child{      
+    background-color: pink;                          
+} 
+nav#linkvari ul li:first-child a{      
+    color: white;
+}
+nav#linkvari ul li:last-child a{
+    color: white;
+} */
+/*L. consegna*/
+nav#linkvari ul li:nth-child(even){
+    background-color: black;
+}
+nav#linkvari ul li:nth-child(odd){
+    background-color: lightgreen;
+}
+nav#linkvari ul li a{
+    color: white;
+}   /*M. consegna*/
+nav#linkvari ul li:not(.piccoli) a{
+    font-size: 1.5em;
+}   /*N. consegna*/
+/*-------------------------------------------es.pseudoclassi strutturali*/
+input:disabled{
+    background-color: grey;
+}/*O. consegna*/
+fieldset.interessi input:checked+label{     /*chiedere al prof riguardo a selettori + e ~*/
+    font-size: 2em;
+    color: tomato;
+}/*P. consegna*/
+/*-----------------------------------------------es.pseudoclassi input*/
