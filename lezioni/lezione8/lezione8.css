@@ -43,6 +43,9 @@ section#header .logo{
 section#header .contatti, section#header .telefono, section#header .ig{
     float: right;
 }
+section#header .ig{
+    clear: right;
+}
 section#header a{
     padding: 0;
 }
@@ -66,7 +69,7 @@ section#hero {
     padding: 0.5em;
 }
 .ombra{
-    text-shadow: 3px 3px 5px #000;  /*effetto ombreggiato */
+    text-shadow: 3px 3px 5px #000;  /*effetto ombreggiato: valore-orizzontale, valore-verticale, instensità-blur, colore*/
 }
 section#articoli h3{
     text-transform: uppercase;
@@ -75,4 +78,33 @@ section#articoli h3{
     section#articoli div{
         width: 32.9%;
     }
+
+
 }
+section#claim{
+    /* background-image:url('./immagini/città-chiaro.jpg'); */
+    background-image:url('./immagini/città-scuro.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    background-attachment: fixed;
+
+}
+section#claim h2{
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    font-size: 2.5rem;
+    position: relative;
+    z-index: 2;
+}
+.pellicola{
+    position: absolute;             /*effetto semi trasparente*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0, 0, 0.6);
+}
+/*effetto di scroll dell'immagine con una "pellicola" semitrasparente che copre la foto ma non il titolo*/
