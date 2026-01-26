@@ -1,0 +1,78 @@
+/* .primo-div{
+    box-sizing: border-box;
+}
+.secondo-div{
+    box-sizing: content-box;
+} */
+ 
+* {
+  font-family: "Open Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:      
+    "wdth" 100;
+    font-variant:all-small-caps;
+}
+h1{
+  font-family: "Rubik Storm", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}           /*stili di font diversi*/
+.strike{
+    text-decoration: line-through;
+}
+.primo-div, .secondo-div, .terzo-div{
+    box-sizing: border-box;
+    width: 98%;
+    padding: 0.5rem;
+    border: 2px solid black;
+    display: inline-block;
+}
+section#header{
+    background-color: lightskyblue;
+}
+section#header div, section#header a{
+    color: white;
+    display: inline-block;
+    padding: 1rem;
+}
+section#header .logo{
+    float: left;
+}
+section#header .contatti, section#header .telefono, section#header .ig{
+    float: right;
+}
+section#header a{
+    padding: 0;
+}
+section#header{
+    overflow: auto;
+}
+section#hero {
+    /* background-color: #f08a5d;*/
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    font-size: 2rem;
+    font-weight: bold;
+    min-height: 300px;
+    background-image: url('./immagini/palazzo-640.jpg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;     /*l'immagine copre tutto lo sfondo ma si ridimensiona*/
+    /* background-attachment: fixed; */
+    /* background-size: contain;    l'immagine viene mostrata interamente ma non copre lo sfondo completamente*/
+    padding: 0.5em;
+}
+.ombra{
+    text-shadow: 3px 3px 5px #000;  /*effetto ombreggiato */
+}
+section#articoli h3{
+    text-transform: uppercase;
+}
+@media screen and(min-width:768px){
+    section#articoli div{
+        width: 32.9%;
+    }
+}
