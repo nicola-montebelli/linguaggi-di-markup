@@ -89,25 +89,49 @@ section.testo{
     margin-bottom: 1em;
     background-color: lightgreen;
 }
-section.testo p{
-    padding: 1em; /*1 valore per i 4 lati*/
+/* section.testo p{
+    padding: 1em; 
     margin: 15px 10%;        
     border: 3px dotted black;
     background-color: lightblue;
-}       /*F. consegna*/
+}        */
+
+/*F. consegna*/
+section.riga{
+    margin: 0 auto;
+    width: 90%;
+    font-size: 0px;
+}
 section.testo{
-    max-width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto; /*per centrare gli elementi*//*chiedere al prof per chiarimenti*/
+    display: inline-block;
+    font-size: 16px;
 }
 @media screen and(min-width: 760px){
         section.testo{
             max-width: 80%;
         }
 }/*G. consegna*/
+section.box, section.cbox{
+    border: 1px solid black;
+    padding: 10px;
+}
 section.box{
-    box-sizing: border-box;                 /*da chiedere al prof per differenze*/
+    box-sizing: border-box;                 
 }/*H. consegna*/
+section.cbox{
+    box-sizing: content-box;                 
+}/*H. consegna*/
+@media screen and (min-width: 760px) {
+    section.testo{
+    width: 32%;
+    }
+    section.riga section:nth-child(1),section.riga section:nth-child(2){
+        margin-right: 0.8em;
+    }
+}
 /*------------------------------------------es. box model*/
 nav#linkvari ul li{
     display: inline;
@@ -142,7 +166,7 @@ nav#linkvari ul li:not(.piccoli) a{
 input:disabled{
     background-color: grey;
 }/*O. consegna*/
-fieldset.interessi input:checked+label{     /*chiedere al prof riguardo a selettori + e ~*/
+fieldset.interessi input:checked+label{     
     font-size: 2em;
     color: tomato;
 }/*P. consegna*/
