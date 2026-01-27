@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+}
+#logo{
+    margin: 20px auto;
+    display: block;
+    max-width: 250px;
+}
+#portali ul li{
+    display: inline;
+    color: white;
+}
+#portali{
+    padding: 2px;
+    background-color: blue;
+    text-align: center;
+}
+@media screen and (max-width:768px){
+    #portali ul li{
+        display: block;
+        color: black;
+    }
+    #portali{
+        background-color: yellow;
+        text-align: center;
+    }
+}
+#banner{
+    width: 100%;
+    max-height: 250px;
+}
+#articoli article{
+    padding: 3px;
+    /* box-sizing: content-box; */
+    /* border: 1px dashed black; */
+    width: 32%;
+    display: inline-block;
+}
+#articoli img{
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 2px;
+    display: block;
+}
+#articoli h2{
+    text-align: center;
+}
+@media screen and (max-width: 768px){
+    #articoli article{
+        padding: 2px;
+        width: 100%;
+        display: block;
+    }
+    #articoli p{
+        text-align: center;
+    }
+}

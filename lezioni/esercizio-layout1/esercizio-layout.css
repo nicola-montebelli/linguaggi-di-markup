@@ -15,7 +15,7 @@ nav#links ul li{
 nav#links{
     text-align: center;
     background-color: orange;
-    padding: 2px;
+    padding: 2px;       /*perchè varia così tanto il contenuto con 2 px di padding*/
 }
 .contenitore{
     margin: 20px auto;
