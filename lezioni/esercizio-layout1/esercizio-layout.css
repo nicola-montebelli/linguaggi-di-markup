@@ -1,0 +1,52 @@
+body{
+    margin: 0px;
+}
+img#logo{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    max-width: 250px;
+}
+nav#links ul li{
+    display: inline;
+}
+nav#links{
+    text-align: center;
+    background-color: orange;
+    padding: 2px;
+}
+.contenitore{
+    margin: 20px auto;
+    width: 80%;
+    font-size: 0px;  /*chiedere perchè è così influente*/
+}
+#colsx,#coldx{
+    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+img#azienda{
+    width: 100%;
+}
+#motto{
+    min-height: 200px;
+}
+#motto h2{
+    text-align: center;
+}
+@media screen and (max-width:768px){  /*attenzione agli spazi*/
+    nav#links ul li{
+        display: block;
+    }
+    #colsx, #coldx{
+        width: 100%;
+    }
+    .contenitore{
+        width: 90%;
+    }
+}
