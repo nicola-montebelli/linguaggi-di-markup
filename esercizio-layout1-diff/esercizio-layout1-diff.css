@@ -18,7 +18,7 @@ body{
 }/*menu nav*/
 
 section#testo{
-    margin: 20px auto;      /*non appaiono le icone*/
+    margin: 20px auto;      /*non ricordo le librerie cnd da copiare per le icone*//*fa-regular con l'icona della moto da problemi che non ho capito*/
     width: 80%;
     font-size: 0px;
    
@@ -34,4 +34,107 @@ section#testo div{
     box-sizing: border-box;
     text-align: justify;
 }
+section#mission{
+    min-height: 200px;
+    background-image: url(./assets/sfondo.jpg);
+    background-position: center;
+    background-attachment: fixed;
+}
+section#mission h2{
+    position: relative;
+    padding: 10% 0;
+    text-align: center;
+    color: whitesmoke;
+}
+.pellicola{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.750);
+}
 
+
+section#articoli{
+    margin: 20px auto;
+    width: 80%;
+    font-size: 0px;
+}
+section#articoli article{
+    width: 50%;
+    display: inline-block;
+    font-size: 15px;
+}
+article{
+    padding: 0px 10px;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+
+
+section#galleria h2{
+    text-align: center;
+    font-size: 32px;
+}
+section#galleria{
+    margin: 20px auto;
+    font-size: 0px;
+    width: 80%;
+}
+section#galleria img{
+    width: 23%;
+    border-radius: 10px;
+    margin-right: 2%;
+}
+/* section#galleria img:last-child{
+    float: right;
+}
+section#galleria img:first-child{
+    float: left;
+}
+section#galleria img:nth-child(3), section#galleria img:nth-child(4){
+    margin-left: 2.7%;
+} */
+
+
+div#footer{
+    background-color: dimgray;
+    width: 100%;
+    margin: 40px 0 0 0;
+    color:bisque;
+    min-height: 20px;
+    text-align: center;
+    padding: 20px 0;
+}
+
+@media screen and (max-width: 768px){
+    #navigazione ul li{
+        display: block;
+    }
+    section#testo{
+        width: 90%;
+    }
+    section#testo div.servizio{
+        display: block;
+        width: 100%;
+    }
+    div.pellicola{          /*non copre l'intera immagine*/
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.930);
+    }
+    section#articoli{
+        width: 90%;
+    }
+    section#articoli article{
+        width: 100%;
+        display: block;
+    }
+    section#galleria{
+        width: 90%;
+    }
+    section#galleria img{
+        width: 48%;
+        margin-right: 2%;   /*modo per mandare a capo le immagini 2 a 2 */
+        margin-bottom: 2%;
+    }
+}
