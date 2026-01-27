@@ -108,3 +108,35 @@ section#claim h2{
     background-color: rgba(0,0, 0, 0.6);
 }
 /*effetto di scroll dell'immagine con una "pellicola" semitrasparente che copre la foto ma non il titolo*/
+#footer-content{
+    width: 100%;
+    background-color: #1b9aaa;
+    min-height: 10rem;
+}
+#footer-content div{
+    width: 100%;
+}
+#socket{
+    width: 100%;
+    background-color: #1b9aaa;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    font-size: 0.9rem;
+}
+#footer-content a, #footer-content div{
+    color: white;
+    padding: 0.8rem 0;
+    text-align: center;
+}
+@media screen and(min-width:768px){
+    section#articoli div{
+        width: 32.9%;
+    }
+    #footer-content div, #socket div{
+        width: 32%;
+        display: inline-block;
+        padding: 2rem;
+    }
+}
