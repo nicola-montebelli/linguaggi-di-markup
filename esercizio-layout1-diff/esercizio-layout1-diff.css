@@ -18,9 +18,9 @@ body{
 }/*menu nav*/
 
 section#testo{
-    margin: 20px auto;      /*non ricordo le librerie cnd da copiare per le icone*//*fa-regular con l'icona della moto da problemi che non ho capito*/
-    width: 80%;
-    font-size: 0px;
+    margin: 20px auto;      /*!!! non ricordo le librerie cnd da copiare per le icone*//*fa-regular con l'icona della moto da problemi che non ho capito*/
+    width: 80%;                 
+    font-size: 0px;         /*!!!chiedere del perchè il font-size 0 px mi permetteva di posizionare i div in linea e senza font-size non erano in linea*/
    
 }
 section#testo div{
@@ -39,17 +39,25 @@ section#mission{
     background-image: url(./assets/sfondo.jpg);
     background-position: center;
     background-attachment: fixed;
+    position: relative;
 }
 section#mission h2{
     position: relative;
-    padding: 10% 0;
+    padding: 60px 0;
     text-align: center;
     color: whitesmoke;
 }
-.pellicola{
+section#mission div.pellicola{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;            /*con questi la pellicola rimane attaccata alla section mission (banner)*/
+    right: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.750);
+    
+
 }
 
 
@@ -117,7 +125,7 @@ div#footer{
         display: block;
         width: 100%;
     }
-    div.pellicola{          /*non copre l'intera immagine*/
+    div.pellicola{                          /*!!! non copre l'intera immagine*/
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.930);
