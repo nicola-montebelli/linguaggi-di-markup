@@ -17,7 +17,8 @@ h1,h2,h3{
     display: flex;              /*argomento pagina 162*/
     flex-direction: row;    /*disposizione su riga*/
     gap: 20px;          /*per spaziarli*/
-    justify-content: space-between;
+    justify-content: space-between;     /*nella section ci sono 3 a 2 delle quali sono dentro un div*/
+                                        /*il space-between separa il primo a e il div che però contiene 2 a così risultano separati in coppia*/
     background-color: blue;
     padding: 0.5em 1em;  /*il padding è lo spazio tra il bordo e il contenuto*/
 }
