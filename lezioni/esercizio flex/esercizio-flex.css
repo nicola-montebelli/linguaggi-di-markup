@@ -1,0 +1,27 @@
+body{
+    margin: 0;
+}
+h1{
+    text-align: center;
+}
+#prova{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+    gap: 10px;
+}
+.testo-prova{
+    color: red;
+    width: 33%;
+    text-align: center;
+    font-size: 2rem;
+    
+}
+.testo-prova:nth-child(1), .testo-prova:nth-child(3){
+    background-color: cornflowerblue;
+}
+.testo-prova:nth-child(2){
+    background-color: aqua;
+}
