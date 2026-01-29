@@ -1,0 +1,19 @@
+h1{
+    text-align: center;
+}
+#galleria{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    width: 95%;
+    margin: auto;
+}
+.immagine img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+#galleria .immagine:nth-child(1){
+    grid-column: span 2;
+}
