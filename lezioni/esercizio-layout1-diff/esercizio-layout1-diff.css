@@ -35,7 +35,7 @@ section#testo div{
     text-align: justify;
 }
 section#mission{
-    min-height: 200px;
+    min-height: 250px;
     background-image: url(./assets/sfondo.jpg);
     background-position: center;
     background-attachment: fixed;
@@ -43,7 +43,7 @@ section#mission{
 }
 section#mission h2{
     position: relative;
-    padding: 60px 0;
+    padding: 80px 0;
     text-align: center;
     color: whitesmoke;
 }
