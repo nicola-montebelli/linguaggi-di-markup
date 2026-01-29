@@ -18,7 +18,7 @@ body{
 }/*menu nav*/
 
 section#testo{
-    margin: 20px auto;      /*!!! non ricordo le librerie cnd da copiare per le icone*//*fa-regular con l'icona della moto da problemi che non ho capito*/
+    margin: 20px auto;      /*!!! non ricordo le librerie cnd da copiare per le icone*/
     width: 80%;                 
     font-size: 0px;         /*!!!chiedere del perchè il font-size 0 px mi permetteva di posizionare i div in linea e senza font-size non erano in linea*/
    
@@ -125,7 +125,7 @@ div#footer{
         display: block;
         width: 100%;
     }
-    div.pellicola{                          /*!!! non copre l'intera immagine*/
+    div.pellicola{                          
         width: 100%;
         height: 100%;
         background-color: rgba(0, 0, 0, 0.930);
