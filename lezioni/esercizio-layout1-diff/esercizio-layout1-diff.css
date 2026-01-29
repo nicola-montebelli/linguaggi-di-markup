@@ -18,7 +18,7 @@ body{
 }/*menu nav*/
 
 section#testo{
-    margin: 20px auto;      /*!!! non ricordo le librerie cnd da copiare per le icone*/
+    margin: 20px auto;      /*!!! libreria cdn fontawesome*/
     width: 80%;                 
     font-size: 0px;         /*!!!chiedere del perchè il font-size 0 px mi permetteva di posizionare i div in linea e senza font-size non erano in linea*/
    
