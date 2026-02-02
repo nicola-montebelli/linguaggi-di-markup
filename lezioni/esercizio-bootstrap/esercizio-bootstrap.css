@@ -16,3 +16,7 @@
                                   
                                   guardare l'html del prof per vedere come ha fatto*/
 }
+.btn{
+    display: flex;
+    float: right;           /*provare a guardare il position di bootstrap*/
+}
