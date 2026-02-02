@@ -1,0 +1,14 @@
+/* article img{
+    max-width: 100%;        sostituito dalla class="thumbnail" definita nell'elemento img
+} */
+ .carousel-item{
+    height: 350px;
+    object-fit: cover;
+    object-position: bottom;
+ }
+ .carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+ }
+ /*dimensiona le immagini del carosello*/ 
