@@ -1,0 +1,18 @@
+.carousel-item{
+    height: 600px;
+    object-fit: cover;
+    object-position: bottom;
+}
+.carousel-item img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#iscrizione{
+                                /*provato con float right
+                                  con margin left auto e ms-auto
+                                  e con la classe pull-right
+                                  richiamato sia da last-child che direttamente dal suo #id
+                                  
+                                  guardare l'html del prof per vedere come ha fatto*/
+}
