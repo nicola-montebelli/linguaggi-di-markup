@@ -8,15 +8,17 @@
     width: 100%;
     object-fit: cover;
 }
-#iscrizione{
+
                                 /*provato con float right
                                   con margin left auto e ms-auto
                                   e con la classe pull-right
                                   richiamato sia da last-child che direttamente dal suo #id
                                   
                                   guardare l'html del prof per vedere come ha fatto*/
+
+                                /*SOLUZIONE AL BUTTON: tag button con ms-auto FUORI dal ul perchè ul non è flex*/
+.navbar{
+    width: 90%;
+    margin: 0 auto;
 }
-.btn{
-    display: flex;
-    float: right;           /*provare a guardare il position di bootstrap*/
-}
+
