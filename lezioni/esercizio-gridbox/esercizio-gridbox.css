@@ -4,10 +4,38 @@ h1{
 #galleria{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 300px;
     gap: 10px;
-    width: 80%;
+    width: 90%;
     margin: auto;
 }
+#galleria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+} 
+#galleria div:nth-child(1){
+    grid-column: span 2;
+}
+#galleria div:nth-child(5){
+    grid-column: span 2;
+}
+#galleria div:nth-child(6){
+    grid-row: span 2;
+}
+#galleria div:nth-child(7){
+    grid-column: span 3;
+}
 
+@media screen and (max-width: 516px){
+    #galleria{
+        width: 80%;
+        grid-template-columns: 100%;
+        display: block;
+    }
+    #galleria img{
+        max-height: 300px;
+    }
 
-
+}
