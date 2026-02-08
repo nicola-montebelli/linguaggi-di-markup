@@ -84,8 +84,8 @@ section#galleria h2{
     font-size: 32px;
 }
 section#galleria{
-    margin: 20px auto;
-    font-size: 0px;
+    margin: 20px auto;      /*un altro modo per inserire le immagini è quello di metterle in dei div tramite css e poi andare a impostare le regole ai div*/
+    font-size: 0px;         /*con i div probabilmente sarebbe più facile centrarle e spaziarle*/
     width: 80%;
 }
 section#galleria img{
