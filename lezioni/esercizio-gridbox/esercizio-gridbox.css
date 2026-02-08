@@ -9,6 +9,15 @@ h1{
     width: 90%;
     margin: auto;
 }
+#galleria .uno img{
+    object-position: center 10%;
+}
+#galleria .sette img{
+    object-position: center 60%;
+}
+#galleria .quattro img{
+    object-position: center 5%;
+}
 #galleria img {
     width: 100%;
     height: 100%;
