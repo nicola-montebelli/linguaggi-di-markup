@@ -1,0 +1,162 @@
+
+#navigazione{
+    width: 80%;
+    margin: auto;
+}
+/*navbar*/
+#carouselExampleCaptions{
+    margin: auto;
+    margin-bottom: 40px;
+}
+ .carousel-item{
+    max-height: 450px;
+ }
+ .carousel-item h5{
+    font-size: 56px;
+ }
+ .carousel-item p{
+    font-size: 28px;
+ }
+ /*sezione carosello*/
+
+h1{
+    margin-top: 30px;
+    text-align: center;
+    border-top: 2px solid black;
+    display: inline;
+}
+.titolo{
+    width: 33%;
+    margin: auto;
+    text-align: center;
+    
+}
+/*titoli*/
+
+#servizi{
+    display: flex;
+    margin: auto;
+    justify-content: space-evenly;
+}
+#servizi .card{
+    flex-direction: row;
+}
+.card{
+    text-align: center;
+}
+#servizi
+{
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+/*cards*/
+
+#container p{
+    font-size: 16px;
+}
+.servizio,.scopo{
+    padding-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-right: 20px;
+}
+#container{
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-areas: 
+    "servizio azienda"
+    "team scopo";
+    grid-template-columns: 3fr 3fr;
+    margin-bottom: 40px;
+}
+#container div.servizio{
+    grid-area: servizio;
+}
+#container div.immagine1{
+    grid-area: azienda;
+}
+#container div.immagine2{
+    grid-area: team;
+}
+#container div.scopo{
+    grid-area: scopo;
+}
+/*sezione azienda*/
+
+#compilazione{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+#compilazione input{
+    width: 100%;
+}
+#compilazione textarea{
+    width: 100%;
+}
+#compilazione input[type="button"]{
+    background-color: #212529;
+    color: white;
+}
+/*form*/
+
+#footer{
+    columns: 2;
+    margin: auto;
+    width: 80%;
+    background-color: #212529;
+    color: white;
+}
+#footer div{
+    padding: 20px 20px;
+}
+.developed{
+    font-size: 10px;
+    width: 80%;
+    margin: auto;
+    background-color: #ccc;
+    text-align: center;
+}
+
+
+
+@media screen and (max-width:768px){
+    #navigazione{
+        width: 100%;
+    }
+    #carouselExampleCaptions
+    {
+        width: 100%;
+    }
+    #container{
+       grid-template-areas: 
+        "servizio" 
+        "azienda"
+        "team" 
+        "scopo";
+        grid-template-columns: auto;
+    }
+    .titolo{
+        width: 50%;
+        margin: auto;
+    }
+    .titolo h1{
+        display: inline;
+    }
+}
+
+@media screen and (max-width:425px)
+{
+    #navigazione{
+        width: 100%;
+        margin: auto;
+    }
+    #servizi{
+        display: flex;
+        flex-direction: column;
+    }
+    #servizi .card{
+            margin: auto;
+    }
+}
