@@ -1,0 +1,2 @@
+a casa installare tutto il necessario per laravel seguendo il pdf del prof
++ esercizio del prof 'corsoss' che si trova nel repository del prof sotto la cartella esercizi
