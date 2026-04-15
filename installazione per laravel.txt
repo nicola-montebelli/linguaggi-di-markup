@@ -1,2 +1,38 @@
 a casa installare tutto il necessario per laravel seguendo il pdf del prof
-+ esercizio del prof 'corsoss' che si trova nel repository del prof sotto la cartella esercizi
+
+Se Composer e PHP sono già installati, si può installare l’installer di Laravel via Composer:
+## composer global require laravel/installer ##
+
+Il file composer.json
+Un progetto che utilizza Composer è caratterizzato dalla 
+presenza del file composer.json nella directory 
+principale. Questo file contiene tutte le dipendenze per 
+il progetto. In un progetto Laravel viene generato 
+contestualmente alla creazione dell’app.
+Ogni dipendenza è composta dal nome del pacchetto
+(package name. Composto a sua volta dal nome del vendor
+e nome del pacchetto separati da /) e da un selettore di
+versione (version contraint*).
+Con il comando 
+## composer install ## (per quando si prende un progetto da un repo e bisogna installare le dipendenze)
+oppure
+## php composer.phar update ##
+i pacchetti specificati all’interno del file verranno  
+scaricati e installati, la loro esatta versione verrà 
+trascritta nel file composer.lock (file che serve per 
+«bloccare» l’esatta versione delle dipendenze) e le 
+dipendenze saranno inserite nella cartella vendor del 
+progetto.
+
+Installare un pacchetto (require)
+Il repository principale dal quale composer scarica i 
+pacchetti è Packagist
+. Attraverso il comando require
+la libreria viene cercata automaticamente tra quelle 
+presenti in questo repository. 
+## composer require mypackage ##
+
+###Ricordarsi anche del file .env
+.env.example  -> .env e si personalizza il file
+
+aggiungere nelle variabili d'ambiente il path C:/xampp/PHP
