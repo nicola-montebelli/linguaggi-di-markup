@@ -76,6 +76,7 @@ Route::prefix('admin')->group(function(){
         ]);
     });
 })->middleware('verify.param');  //app/http/middlware/verifyparam.php
+                                //bootstrap/app registare il middleware
 
 //esercizietto middleware che filtra le richieste all'endpoint /products che 
 //non hanno i parametri user=='ifts' e password=='2026'
@@ -120,15 +121,16 @@ Route::middleware('check.user')->group(function() {
         ]);
     })->name('categories.search');
 });
-
+//fine esercizietto check.user
 
 // Rotte per autentcazione con sanctum
 Route::post('/login', function (Request $request) {
     $validated = $request->validate([
-        'email' => 'required|email',            //qui si inseriscono le regole di validazione in modo semplice
+        'email' => 'required|email',            //qui si inseriscono le regole di validazione in modo semplice(slide 152+)
         'password' => 'required|min:3',
     ]);
-    //qui i parametri sono corretti, creiamo il token
+    //qui i parametri sono corretti, creiamo il token (aggiungere HasApiToken nel file User.php in app/Models/ ->  use HasFactory, Notifiable, HasApiTokens;)
+    //attempt e user danno errore ma non influiscono sul progetto finale
     if (auth()->attempt($validated)) {
         $user = auth()->user();
         $token = $user->createToken('auth_token')->plainTextToken;
@@ -145,3 +147,19 @@ Route::middleware(['auth:sanctum'])->group(function () {
         ]);
     });
 });
+
+
+##Controller (slide 104+)##
+//rotte non protette da auth:sanctum
+//esempi di Controller 
+// Route::get('/mio', [App\Http\Controllers\MioController::class, 'index']);
+// Route::post('/mio', [App\Http\Controllers\MioController::class, 'store']);
+
+
+//Route::resource('courses', App\Http\Controllers\CourseController::class)->only(['index', 'store','show','update','destroy']);
+//->only(*metodi*) per specificare i metodi http (nel file CoursesController.php abbiamo tolto alcuni metodi)
+
+//oppure
+Route::apiResource('courses', App\Http\Controllers\CourseController::class);
+Route::apiResource('categories', App\Http\Controllers\CategoryController::class);
+Route::apiResource('tools', App\Http\Controllers\ToolsController::class);

@@ -33,6 +33,6 @@ presenti in questo repository.
 ## composer require mypackage ##
 
 ###Ricordarsi anche del file .env
-.env.example  -> .env e si personalizza il file
+.env.example  -> .env e si personalizza il file (vedere gli screen in laravel-screen)
 
 aggiungere nelle variabili d'ambiente il path C:/xampp/PHP
