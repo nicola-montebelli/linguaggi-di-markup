@@ -162,4 +162,12 @@ Route::middleware(['auth:sanctum'])->group(function () {
 //oppure
 Route::apiResource('courses', App\Http\Controllers\CourseController::class);
 Route::apiResource('categories', App\Http\Controllers\CategoryController::class);
-Route::apiResource('tools', App\Http\Controllers\ToolsController::class);
+//Route::apiResource('tools', App\Http\Controllers\ToolsController::class);
+
+Route::apiResource('tools', App\Http\Controllers\ToolsController::class)
+    ->only(['index', 'show']);
+
+Route::middleware('auth:sanctum')->group(function () {
+    Route::apiResource('tools', App\Http\Controllers\ToolsController::class)
+        ->only(['store', 'update', 'destroy']);
+});
