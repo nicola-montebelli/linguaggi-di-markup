@@ -16,6 +16,7 @@ class ToolsController extends Controller
         return response()->json($tools);
     }
 
+
     /**
      * Store a newly created resource in storage.
      */
@@ -74,5 +75,11 @@ class ToolsController extends Controller
         } else {
             return response()->json(['message' => 'Tool not found'], 404);
         }
+    }
+
+    public function count()
+    {
+        $count = DB::table('tools')->count();
+        return response()->json(['count' => $count]);
     }
 }

@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Request as FacadeRequest;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\DB;
 
 // Route::get('/user', function (Request $request) {
 //     return $request->user();
@@ -138,6 +139,12 @@ Route::post('/login', function (Request $request) {
     }
     return response()->json(['message' => 'Invalid credentials'], 401);
 })->name('login');
+//mandare una post con i dati corretti specificati da tinker con un create::user
+/**
+ * esempio: User::create(['name' => 'Mario Rossi','email' => 'mario@example.com','password' => Hash::make('password')]);
+ * e nella chiamata POST in postman mettere nel body quei campi
+ * in questo modo verrà creato il token nella tabella personal_access_token
+ */
 
 // Rotte protette da auth:sanctum
 Route::middleware(['auth:sanctum'])->group(function () {
@@ -162,4 +169,19 @@ Route::middleware(['auth:sanctum'])->group(function () {
 //oppure
 Route::apiResource('courses', App\Http\Controllers\CourseController::class);
 Route::apiResource('categories', App\Http\Controllers\CategoryController::class);
+
+//creare una rotta per ritornare il numero dei tool presenti nel db
+//creare una rotta  
+//inserire un metodo count() nel controller
+//all'interno del metodo count() eseguire una query per contare i tools
+Route::get('/tools/count',[App\Http\Controllers\ToolsController::class, 'count'])->name('tools.count');
+//route::get va messo prima di apiResources
+
 Route::apiResource('tools', App\Http\Controllers\ToolsController::class);
+
+
+
+
+
+
+
