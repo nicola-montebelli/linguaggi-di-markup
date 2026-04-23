@@ -35,4 +35,13 @@ presenti in questo repository.
 ###Ricordarsi anche del file .env
 .env.example  -> .env e si personalizza il file (vedere gli screen in laravel-screen)
 
-aggiungere nelle variabili d'ambiente il path C:/xampp/PHP
+aggiungere nelle variabili d'ambiente il path C:\Users\UTENTE\Desktop\XAMPP\php
+e 
+C:\Users\UTENTE\AppData\Roaming\Composer\vendor\bin
+
+
+######
+Errore di postman nel pc a casa
+######
+
+ "message": "The route tools could not be found.",
